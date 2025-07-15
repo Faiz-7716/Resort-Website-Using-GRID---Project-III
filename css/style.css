@@ -1,0 +1,1259 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+div img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-family: 'PlayFair Display', 'Cinzel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: 'Playfair Display', 'Cinzel' 'Montserrat', sans-serif;
+  background-color: #FFFBE9;
+  /* Light base */
+  color: #2e2e2e;
+  /* Neutral text */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #FFFBE9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* background-color: white; */
+  /* Light navbar */
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #AD8B73;
+  /* Primary */
+  font-family: 'Cinzel Decorative', Cinzel, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Hide checkbox for mobile toggle */
+#toggle-menu {
+  display: none;
+}
+
+/* Hamburger Menu Icon (for mobile) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #AD8B73;
+}
+
+/* Nav Links Grid */
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 1.5rem;
+  justify-content: end;
+  z-index: 10000000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #AD8B73;
+  /* Primary dark beige */
+  font-family: 'Playfair Display', 'Cinzel', Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  justify-self: center;
+  align-self: center;
+  z-index: 10000000;
+}
+
+.nav-links a:hover {
+  color: #E3CAA5;
+  /* Golden accent on hover */
+}
+
+/* CTA Button (Book Now) */
+.cta {
+  background-color: #AD8B73;
+  color: #FFFBE9 !important;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #CEAB93;
+  color: #1a1a1a !important;
+}
+
+
+.hero {
+  max-width: 100vw;
+}
+
+.hero-image img,
+.card-image img {
+  height: 100%;
+  max-width: 100vw;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 50vh;
+  grid-area: 1 / 1 / 2 / 4;
+  filter: brightness(75%);
+}
+
+.hero-text {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-area: 1 / 2 / 2 / 3;
+  font-family: 'Playfair Display', 'Cinzel', Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  animation-delay: 0.5s;
+  color: #ffffff;
+  align-items: center;
+  justify-items: center;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text h3 {
+  font-size: 4rem;
+  text-align: center;
+
+}
+
+.hero-text p {
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 1;
+  /* Text stays on top */
+  background-color: transparent;
+}
+
+.hero-text button {
+  padding: 12px 20px;
+  background-color: #FFFBE9;
+  color: #1a1a1a;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.head-text {
+  max-width: 100vw;
+}
+
+.head {
+  margin: auto;
+  padding: 20px;
+  font-family: 'Cinzel', 'PlayFair Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  width: 80%;
+  text-align: center;
+}
+
+.head h3 {
+  font-weight: 400;
+}
+
+.offer {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 50% 1fr;
+  grid-auto-columns: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+}
+
+.card {
+  grid-area: 2 / 2 / 3 / 4;
+  background-color: #DABB99;
+  z-index: 10000;
+}
+
+.card-image {
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+.card-image:hover {
+  transform: scale(1.02);
+  transition: all .5s linear;
+}
+
+.card {
+  background-color: #CEAB93;
+  padding: 1rem;
+  border-radius: 15px 0px 15px 0px;
+  position: relative;
+  z-index: 2;
+  /* Places the card above the image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  font-family: 'forum', Cinzel, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+
+}
+
+.card-content h2 {
+  color: #ffffff;
+  font-size: 3vw;
+  font-family: "Cinzel Decorative", Cinzel, PlayFair Display;
+}
+
+.card-content {
+  font-size: clamp(.8rem, 1.5vw, 2rem);
+}
+
+.coupon-box {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  justify-items: center;
+}
+
+.cta2 {
+  border-radius: 40px;
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+.cta2 a {
+  color: #1a1a1a;
+}
+
+button:hover {
+  filter: invert(100%);
+  transition: all .5s linear;
+}
+
+.top-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  justify-items: center;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 20px;
+  /* margin: 10px; */
+  align-items: center;
+}
+
+.top-head h5 {
+  font-style: italic;
+  font-family: playfair display, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #AD8B73;
+}
+
+.top-head h3 {
+  font-family: 'Cinzel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.top-head h4 {
+  font-family: 'Cinzel';
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.home-head {
+  /* margin-top:40px ; */
+  justify-items: center;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 40px;
+}
+
+.home-head h5 {
+  font-family: 'Cinzel Decorative', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
+
+.home-head h6 {
+  font-family: 'Forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 text1";
+  width: 90%;
+  margin: auto;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 1rem;
+  box-shadow: inset;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.p2 {
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "text1 img1";
+}
+
+.img1 {
+  grid-area: img1;
+  display: grid;
+  align-items: center;
+}
+
+.img2 {
+  grid-area: img2;
+  display: grid;
+  align-items: center;
+}
+
+.text1 {
+  grid-area: text1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+/* .text1 p,button{
+  margin-bottom: 1rem;
+} */
+.room-name {
+  font-family: 'Cinzel', PlayFair Display, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.room-des {
+  font-family: 'Forum', 'PlayFair Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #AD8B73;
+}
+
+.room-price {
+  font-family: 'Forum', 'PlayFair Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.room-img img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50px; */
+}
+
+.product-card {
+  max-width: 100vw;
+  height: auto;
+  /* background-color: #ffffff; */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 50px; */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-container:hover img {
+  filter: brightness(25%);
+  transform: scale(1.1);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font: 1.5rem 'Forum', 'Monterserrat';
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
+
+.room-features {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: start;
+
+}
+
+.room-features p {
+  padding: 10px;
+}
+
+.pro-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+}
+
+.pro a {
+  font-family: 'Montserrat';
+  color: #2e2e2e;
+}
+
+.pro {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: #AD8B73;
+}
+
+.grid-container {
+  max-width: 100%;
+}
+
+.grid-content {
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, minmax(150px, 1fr));
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img4 img3"
+    "img5 img4 img6"
+    "img7 img7 img6"
+    "img7 img7 img6";
+  height: auto;
+  gap: 10px;
+}
+
+.gig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+.img7 {
+  grid-area: img7;
+}
+
+
+/* --------------------------------------------ROOMS & SUITES STYLE END------------------------------------------- */
+.scroll-head {
+  margin: 40px auto;
+  width: 90%;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.scroll-head h3 {
+  font-family: 'Cinzel', 'PlayFair Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #AD8B73;
+  font-weight: 100;
+  position: relative;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.scroll-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 210px;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+}
+
+/* Card Base */
+.card-box {
+  width: 200px;
+  height: 380px;
+  background-color: #F4ECE2;
+  color: #AD8B73;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+
+/* Staggered effect */
+/* .card-box:nth-child(2n) {
+  margin-top: 75px;
+} */
+/* Replacing card-content */
+.amenity-wrapper {
+  padding: 10px;
+  display: grid;
+  height: 95%;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Inside Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-num {
+  display: grid;
+  width: 90%;
+  margin: auto;
+}
+
+.card-num h3 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  text-align: start;
+  font-family: 'Forum';
+}
+
+.card-text p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Forum', "PlayFair Display";
+}
+
+/* -----------------------------------------------------STAGGERED CARD--------------------------------------------- */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.hero-content {
+  font-family: 'Cinzel Decorative', 'Cinzel', 'PlayFair Display';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-btn {
+  font-family: 'Cinzel', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #AD8B73;
+  padding: 12px 30px;
+  font-weight: 600;
+  margin-top: 15px;
+  display: inline-block;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.intro-container {
+  max-width: 100vw;
+}
+
+.intro {
+  padding: 5px;
+  gap: 5px;
+  width: 95%;
+  margin: 40px auto 40px auto;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  grid-template-rows: 100vh;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  grid-template-areas:
+    "col1 col2 col3";
+  border-radius: 15px;
+}
+
+.col1 {
+  display: grid;
+  grid-area: col1;
+  height: 100%;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+}
+
+.col2 {
+  grid-area: col2;
+  background-image: url(/img/HOME/bed-beach.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.intro-content img {
+  border-radius: 20px;
+}
+
+.intro-content h3 {
+  font-family: 'Cinzel Decorative', 'Ciznel', 'PlayFair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.intro-content p {
+  color: #000;
+  font-family: "fORUM", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.intro-btn {
+  padding: 15px;
+  /* border-radius: 5px; */
+  background-color: #AD8B73;
+  border: 1px solid #2e2e2e;
+}
+
+.intro-btn:hover {
+  background-color: #1a1a1a;
+  color: #FFFBE9;
+  border: 1px solid #FFFBE9;
+}
+
+.intro-btn a {
+  color: #ffff;
+}
+
+.col1 img,
+.intro-content,
+.col3 img {
+  border-radius: 15px;
+}
+
+.col3 {
+  grid-area: col3;
+}
+
+.col-img3 {
+  height: 100%;
+}
+
+.col-img3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.abt {
+  margin: 40px auto;
+  border: 0px solid #140D4B;
+}
+
+.about {
+  margin: auto;
+  width: 97%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 400px;
+  grid-template-areas:
+    "sec1-content img-content1"
+    "img-content2 sec2-content";
+  background-color: #F4ECE2;
+  /* a soft, sandy beige */
+
+}
+
+.ic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec1-content {
+  grid-area: sec1-content;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+}
+
+.img-content1 {
+  grid-area: img-content1;
+}
+
+.sec2-content {
+  padding: 25px;
+  grid-area: sec2-content;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.img-content2 {
+  grid-area: img-content2;
+}
+
+.about p {
+  font-size: 1.1rem;
+  font-family: 'forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* letter-spacing: 1px; */
+  font-weight: 500;
+}
+
+.about h3 {
+  font-family: 'Cinzel Decorative', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #AD8B73;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-btn {
+  padding: 20px 50px;
+  background-color: #F4ECE2;
+  border: 1px solid #2e2e2e;
+}
+
+/* ------------------------------------EVENTS-------------------------------------------------------------------------- */
+.events {
+  margin-top: 40px;
+}
+
+.ets {
+  width: 90%;
+  margin: 0px auto 0px auto;
+  background-color: #F8ECE7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ets button {
+  background-color: #F8ECE7;
+}
+
+.end-card {
+  grid-template-rows: auto;
+}
+
+/* -------------------------------------------GALLERY------------------------------------------------------------- */
+.masonry-gallery {
+  padding: 40px 20px;
+  background-color: #FFFBE9;
+}
+
+.masonry-grid {
+  /* display: grid; */
+  column-count: 3;
+  /* 3 columns on desktop */
+  column-gap: 20px;
+}
+
+.masonry-grid img {
+  width: 100%;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.masonry-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------------------------------------footer----------------------------------------------------------------- */
+.foot-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+
+}
+
+.book-foot {
+  margin-top: 0px;
+}
+
+.news {
+  max-width: 100vw;
+  border-top: 3px solid #1a1a1a;
+  margin-top: 30px;
+  background-color: #F4ECE2;
+  font-family: 'forum';
+}
+
+.news-head {
+  width: 90%;
+  margin: 10px auto;
+  /* background-color: #fff; */
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.box {
+  font-family: 'Forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  border: 1px solid #333;
+  border-radius: 8px;
+  white-space: nowrap;
+  background-color: #fff;
+  width: max-content;
+  justify-self: start;
+  text-align: center;
+  transition: 0.3s;
+  padding: 15px 20px;
+}
+
+.box:hover {
+  background-color: #333;
+  color: white;
+}
+
+.news-head h3 {
+  font-family: 'Forum', "Cinzel Decorative", 'Montserrat';
+  color: #000;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 15px 0px;
+}
+
+.news-head p {
+  font-family: 'Forum', "Cinzel Decorative", 'Montserrat';
+  color: #000;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 15px 0px;
+}
+
+.email-box {
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  justify-items: center;
+  font-size: 20px;
+}
+
+.email {
+  width: 40%;
+  padding: -5px 71px;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  height: 10vh;
+}
+
+.submit {
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 15px 30px;
+  background-color: #fff;
+  font-family: 'Forum', 'Cinzel', 'PlayFair Display';
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.bento-resort {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img1 img5 img5 img4"
+    "img6 img5 img5 img7"
+    "img6 img8 img9 img9";
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+.img7 {
+  grid-area: img7;
+}
+
+.img8 {
+  grid-area: img8;
+}
+
+.img9 {
+  grid-area: img9;
+}
+
+/* ------------------------------------------footer---------------------------------------------------------------------- */
+footer {
+  margin-top: 30px;
+  /* display: grid;
+  justify-items: center; */
+}
+
+.form-news {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer-container {
+  background-color: #F4ECE2;
+  width: 98%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset(2px 2px 2px 2px);
+}
+
+.foot-cont {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+footer input {
+  width: 300px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #2e2e2e;
+}
+
+footer button {
+  border: 1px solid #2e2e2e;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100px;
+  filter: invert(100%);
+  border: 1px solid #2e2e2e;
+}
+
+.footer button:hover {
+  background-color: #F4ECE2;
+  filter: invert(100%);
+}
+
+footer h3 {
+  font-family: 'Forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 0px;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+footer a {
+  color: #2e2e2e;
+  font-family: 'Forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  font-weight: 700;
+  transition: all .2s ease-out;
+}
+
+footer li {
+  margin: 10px 0px;
+
+}
+
+footer a:hover {
+  color: #AD8B73;
+  text-decoration: underline;
+}
+
+.sol-lo {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0px 25px;
+}
+
+.fa-brands {
+  font-size: 25px;
+  padding: 0px 20px;
+}
+
+.fa-facebook-f:hover {
+  color: #1877F2;
+}
+
+.fa-facebook-f {
+  color: black;
+}
+
+.fa-x-twitter {
+  color: black;
+}
+
+.fa-x-twitter:hover {
+  color: #fff;
+}
+
+.fa-instagram {
+  color: black;
+}
+
+.fa-instagram:hover {
+  color: #fd1d1d;
+}
+
+.fa-whatsapp:hover {
+  color: green;
+}
+
+.brand-foot {
+  margin: auto;
+  width: 95%;
+  border-top: 1px solid #d4c2c2;
+}
+
+.brand-foot h1 {
+  font-family: 'Cinzel Decorative', 'Cinzel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 0px;
+  font-size: 6rem;
+  letter-spacing: 10px;
+  text-align: center;
+  color: #AD8B73;
+  font-weight: 500;
+}
+
+.brand-foot p {
+  font-family: 'forum', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------------------------------booking form                ------------------------------------ */
+.booking-section {
+  background-color: #FFFBE9;
+  color: #AD8B73;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.booking-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #AD8B73;
+}
+
+.booking-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #CEAB93;
+  margin-bottom: 2.5rem;
+}
+
+.booking-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #AD8B73;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #CEAB93;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #AD8B73;
+}
+
+.form-submit {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.form-submit button {
+  background-color: #AD8B73;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit button:hover {
+  background-color: #CEAB93;
+}

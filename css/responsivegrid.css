@@ -1,0 +1,400 @@
+@media (max-width: 1200px) {}
+
+@media (min-width:769px) and (max-width: 965px) {
+  .nav-links {
+    font-size: 13px;
+  }
+
+  .room-name {
+    font-size: 1.2rem;
+  }
+
+  .room-features p {
+    padding: 7px;
+    font-size: 12px;
+  }
+
+  .room-des {
+    font-size: .7rem;
+    /* color: #E3CAA5; */
+  }
+
+  .room-price {
+    font-size: 1.2rem;
+  }
+
+  .pro {
+    padding: 8px;
+  }
+
+  .intro-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    grid-template-rows: 80vh;
+  }
+.brand-foot h1{
+  font-size: 5rem;
+}
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    grid-template-columns: 1fr auto;
+  }
+
+  .hamburger {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav-links {
+    grid-template-columns: 1fr;
+    display: none;
+    background-color: #FFFBE9;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    row-gap: 1rem;
+  }
+
+  #toggle-menu:checked~.nav-links {
+    display: grid;
+    height: 90vh;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 10px;
+    border-bottom: 1px solid #CEAB93;
+  }
+
+  .price {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 10px;
+    /* grid-auto-flow: row; */
+    grid-template-areas:
+      "img1"
+      "text1"
+      "img2"
+      "text2";
+  }
+
+  .grid-content {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, minmax(autofit, 1fr));
+    grid-template-areas:
+      "img1 img3"
+      "img2 img5"
+      "img7 img7"
+      "img4 img6"
+      "img4 img6";
+  }
+
+  .room-features {
+    width: 100%;
+  }
+
+  .room-name {
+    font-size: 2rem;
+  }
+
+  .room-price {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
+  .hero-text button {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .top-head h3 {
+    font-size: 2rem;
+  }
+
+  .top-head {
+    grid-template-rows: auto .5fr 1fr;
+  }
+
+  .img1 {
+    align-items: start;
+  }
+
+  .price {
+    grid-template-rows: auto auto;
+  }
+
+  .about {
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "img-content1"
+      "sec1-content"
+      "img-content2"
+      "sec2-content";
+  }
+
+  .sec1-content {
+    row-gap: 15px;
+  }
+
+  .sec2-content {
+    row-gap: 15px;
+  }
+
+  .about-btn {
+    padding: 15px 40px;
+  }
+
+  .sec {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+  }
+
+  .intro {
+    grid-template-rows: 70vh;
+  }
+
+  .intro-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "col2 col2"
+      "col1 col3";
+  }
+   .btn-wrap {
+    grid-column: span 1;
+  }
+  .masonry-grid {
+    column-count: 2;
+  }
+  .hero-image {
+  width: 100%;
+  height: 40vh;
+}
+
+.foot-cont{
+  display: grid;
+  justify-items: center;
+  text-align: center;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.fa-brands{
+  font-size: 25px;
+}
+  
+.brand-foot h1{
+  font-size: 3.5rem;
+}
+.home-head{
+  grid-template-rows: auto .5fr auto;
+        row-gap: 25px;
+}
+.bento-resort {  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "img1 img2 img4"
+    "img1 img3 img4"
+    "img6 img5 img5"
+    "img6 img5 img5"
+    "img8 img7 img9";
+}
+.offer {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  row-gap: 0px;
+}
+
+.card {
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: #DABB99;
+  z-index: 10000;
+  border-radius:10px ;
+} 
+
+.card-image {
+  display: none;
+  grid-area: 1 / 1 / 2 / 3;
+}
+.head{
+  font-size: 1.5rem;
+}
+}
+
+@media (max-width: 500px) {
+  .grid-content {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, minmax(autofit, 1fr));
+    grid-template-areas:
+      "img1 img3"
+      "img2 img5"
+      "img7 img7"
+      "img4 img6"
+      "img4 img6";
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: .9rem;
+  }
+
+  .hero-text button {
+    padding: 5px;
+  }
+
+  .top-head {
+    width: 95%;
+    margin: auto;
+    grid-template-rows: .3fr auto 1fr;
+  }
+
+  .top-head h5 {
+    font-size: 1.8rem;
+  }
+
+  .top-head h3 {
+    font-size: 1.6rem;
+  }
+
+  .room-name {
+    font-size: 1.3rem;
+  }
+  
+  .about h3 {
+    font-size: 1rem;
+  }
+
+  
+  .sec {
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+  }
+  
+  .sec p {
+    font-size: 12px;
+  }
+
+  .about-btn {
+    padding: 10px 25px;
+  }
+  .masonry-grid {
+    column-count: 1;
+  }
+  
+  .foot-cont{
+   grid-template-columns: 1fr;
+  }
+  
+.fa-brands{
+  font-size: 25px;
+}
+footer input, footer button{
+  width: 100%;
+  margin: 10px 0px;
+}
+footer form{
+  margin-bottom: 20px;
+}
+
+.brand-foot h1{
+  font-size: 2.5rem;
+  letter-spacing: 0px;
+}
+
+.bento-resort {  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    /* "img1 img2 img4"
+    "img1 img3 img4"
+    "img6 img5 img5"
+    "img6 img5 img5"
+    "img8 img7 img9"; */
+    "img1 img4"
+    "img1 img4"
+    "img5 img6"
+    "img8 img6"
+    "img2 img3"
+    "img7 img9";
+}
+
+.home-head h5 {
+  font-size: 1.1rem;
+}
+.top-head h4 {
+  font-size: medium;
+}
+.head{
+  font-size: 1.2rem;
+}
+.topic-grid {
+  width: 98%;
+}
+}
+
+@media (max-width:330px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1rem;
+  }
+
+  .hero-text p {
+    font-size: .7rems;
+  }
+
+  .top-head {
+    grid-template-rows: auto .3fr 1fr;
+  }
+
+  .about-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  
+.fa-brands{
+  font-size: 18px;
+}
+
+.brand-foot h1{
+  font-size: 2rem;
+}
+.top-head h5 {
+        font-size: 1.3rem;
+    }
+        .top-head h3 {
+        font-size: 1.3rem;
+    }
+}
